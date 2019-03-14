@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "plugins": ["jest", "prettier"],
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "arrow-parens": "off"
+  }
+}
