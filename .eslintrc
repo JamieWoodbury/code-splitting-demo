@@ -5,8 +5,10 @@
     "jest/globals": true,
     "browser": true
   },
+  "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": "error",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "object-curly-newline": "off"
   }
 }

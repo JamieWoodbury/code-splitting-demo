@@ -1,4 +1,21 @@
 const config = {
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     cacheGroups: {
+  //       commons: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         name: 'vendor',
+  //         chunks: 'initial',
+  //       },
+  //     },
+  //     minChunks: 1,
+  //   },
+  // },
+  // output: {
+  //   chunkFilename: '[name].[chunkhash].js',
+  //   filename: '[name].[hash].js',
+  // },
   module: {
     rules: [
       {
@@ -35,7 +52,6 @@ const config = {
   },
 
   target: 'web',
-  stats: 'none',
 };
 
 module.exports = config;

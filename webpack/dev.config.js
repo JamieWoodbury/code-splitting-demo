@@ -20,7 +20,10 @@ const config = merge(base, {
     port: DEV_PORT,
     contentBase: path.join(__dirname, '../build'),
     https: false,
-    stats: 'minimal',
+    stats: {
+      assets: true,
+    },
+    // stats: 'minimal',
     historyApiFallback: true,
   },
 });
