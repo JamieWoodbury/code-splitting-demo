@@ -1,5 +1,3 @@
-// import path from 'path';
-
 const config = {
   module: {
     rules: [
@@ -9,6 +7,8 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-syntax-dynamic-import'],
             cacheDirectory: true,
           },
         },
@@ -30,11 +30,9 @@ const config = {
       },
     ],
   },
-  // resolve: {
-  //   mainFields: ['module', 'main'],
-  //   modules: ['node_modules', path.resolve(__dirname, '../')],
-  //   extensions: ['.ts', '.tsx', '.js', '.css'],
-  // },
+  resolve: {
+    extensions: ['.jsx', '.js', '.css'],
+  },
 
   target: 'web',
   stats: 'none',

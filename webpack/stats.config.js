@@ -1,14 +1,13 @@
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import webpack from 'webpack';
-import merge from 'webpack-merge';
-import path from 'path';
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const merge = require('webpack-merge');
+const path = require('path');
 
-import baseConfig from './base.config';
+const baseConfig = require('./base.config');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
   entry: {
     bundle: path.resolve(__dirname, '../index.jsx'),
   },
-  plugins: [new BundleAnalyzerPlugin(), new webpack.optimize.ModuleConcatenationPlugin()],
+  plugins: [new BundleAnalyzerPlugin()],
 });
